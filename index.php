@@ -1,9 +1,10 @@
 <?php
 /**
- * @package sodium chloride.Data science and ML exploring Saas.
+ * @package sodium chloride
  * @author Marimuthu @ www.sodiumchloride.in , Mukila @ www.sodiumchloride.in.
  * @version beta 0.1.0
- * @return developer contact marimuthu04032002@gmail.com
+ * @return website https://sodiumchloride.in
+ * @return developer contact marimuthu@sodiumchloride.in , mukila@sodiumchloride.in
  * @return ♥ from Thoothukudi,Tamilnadu,India.
  * @return true
  */
