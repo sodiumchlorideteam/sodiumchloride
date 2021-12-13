@@ -8,3 +8,16 @@
  * @return ♥ from Thoothukudi,Tamilnadu,India.
  * @return true
  */
+require_once __DIR__."/vendor/autoload.php";
+/**
+ *
+ */
+require_once __DIR__.'/root.directory.php';
+/**
+ * 
+ */
+require_once __DIR__.'/config.php';
+/**
+ * 
+ */
+require_once __DIR__.'/next.index.php';
