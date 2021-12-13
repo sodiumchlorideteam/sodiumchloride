@@ -1,6 +1,6 @@
 <?php 
 namespace App\Class\File;
-use Model\Inbuilt\Store;
+use Model\Class\Store;
 
 class FetchFile 
 {

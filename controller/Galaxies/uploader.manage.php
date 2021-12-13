@@ -1,5 +1,5 @@
 <?php 
-use Model\Inbuilt\Store;
+use Model\Class\Store;
 use App\Class\Upload\UploadFunctions;
 //resources
             $initiate           = store::__init__();

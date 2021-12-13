@@ -1,6 +1,6 @@
 <?php
 namespace App\Class\Upload;
-use Model\Inbuilt\Universal;
+use Model\Class\Universal;
 use  App\Class\Json\JsonHandling;
 /**
  * 
