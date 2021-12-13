@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+.top_bar{
+display:flex;
+padding:1%;
+}
+#box-container{
+	padding:1%;
+	border:solid 1px #E0DAD9;
+	width:95%;
+	margin-left:auto;
+	margin-right: auto;
+	background-color:#141313;
+}
+#error{
+	position:relative;
+	padding:5px;
+	margin-top:0px;
+	display:flex;
+	border:solid 1px #E7E2E1;
+}
+#error p{
+	font-size:19px;
+	font-family:'Source Sans Pro', sans-serif;
+	color:red;
+	margin-left:2%;
+}
+#root-root-linear h1,#root-root-linear h2,#root-root-linear h3,#root-root-linear h4,#root-root-linear h5,#root-root-linear h6,#root-root-linear a,#root-root-linear p,#root-root-linear label{
+	font-family:'Source Sans Pro', sans-serif;
+}
+select,option{
+		font-family:'Source Sans Pro', sans-serif;
+}
+i{
+		color:#D5CCCA;
+}
+#root-root-linear{
+	display: flex;
+	justify-content: space-around;
+	width:95%;
+	margin-top:1%;
+}
+#linear-input,#linear-output{
+	display:block;
+	width:48%;
+	padding:1%;
+}
+#linear-output{
+		border:solid 1px #E7E1E0;
+		max-height:70vh;
+		overflow-y: auto;
+		color:#dde1e5;
+}
+#linear-input li button,#linear-output li button{
+	font-family:'Source Sans Pro', sans-serif;
+	text-transform:uppercase;
+	border-radius:0px;
+	background-color:#282360;
+	border-color:#282360;
+	outline:none;
+	box-shadow:none;
+}
+#linear-input a{
+	font-size:17px;
+}
+#linear-input li form input[type='submit'],#linear-input li form select{
+  border-radius:0px;
+}
+#linear-input li form input[type='text']{
+	border-radius:0px;
+	font-family:'Source Sans Pro', sans-serif;
+	color:green;
+	background-color:#fff;
+	height:10vh;
+}
+#linear-input li form input[type='submit']{
+	display: flex;
+	font-family:'Source Sans Pro', sans-serif;
+	text-transform: uppercase;
+	margin-left: auto;
+	outline:none;
+	background-color:#282360;
+	border:solid 1px #282360;
+}
+.plotly-notifier{
+	display:none;
+	visibility:hidden;
+}
+.progress-bar{
+	background-color:#282360 !important;
+}
+@media screen and (max-width:827px){
+#root-root-linear{
+	display: block;
+	width:100%;
+}
+#linear-input,#linear-output{
+	width:95%;
+	margin-left:auto;
+	margin-right:auto;
+	}
+}
+@media screen and (max-width:510px){
+	#root-root-linear{
+	margin-top:20px;
+}
+#root-root-linear h3{
+	font-size:18px;
+}
+#linear-input{
+overflow-x:hidden;
+}
+#linear-output{
+  padding:2%;
+	}
+}

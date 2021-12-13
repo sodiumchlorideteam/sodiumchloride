@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --font: "Inter", sans-serif;
+  --body-color: #637381;
+  --heading-color: #212b36;
+  --primary-color: #282360;
+  --white: #ffffff;
+}
+#lab-box{
+  display:block;
+}
+#lab-box ul button{
+  font-family:var(--font);
+  background-color:#282360;
+  border:none;
+  border-radius:0px;
+}
+#lab-box ul button:focus{
+	border:none;
+	box-shadow:none;
+}
+.tool-box{
+	display: flex;
+	justify-content: space-around;
+	padding:20px;
+	margin-top:1%;
+	flex-wrap: wrap;
+}
+.tool-box a{
+	padding:2%;
+	background-color:#fff;
+	color: #000;
+	border:1px solid #E3D8D8;
+	width:13%;
+	margin-top:5px;
+}
+.tool-box a div{
+	display:block;
+	width:100%;
+}
+.tool-box a div img{
+	margin-left:10%;
+}
+.tool-box a div h6{
+	font-family:var(--font);
+	font-size:100%;
+}
+@media screen and (max-width:1246px){
+	.tool-box a{
+	width:20%;
+}
+}
+@media screen and (max-width:810px){
+	.tool-box a{
+	width:25%;
+}
+}
+@media screen and (max-width:662px){
+	.tool-box a{
+	width:35%;
+}
+}
