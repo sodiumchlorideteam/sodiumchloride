@@ -16,7 +16,7 @@
  ***
   
   **GET STARTED**\
-  1.Download the Package and Extract in your server directory\
+  1.Download the Package and Extract in your server directory
   
   ```
   Tools:
