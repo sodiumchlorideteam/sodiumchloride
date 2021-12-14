@@ -12,3 +12,54 @@
  Python libraries    : numpy,pandas,scikit-learn,matplotlib,plotly,xlrd,kaleido-0.2.1,openpyxl
  tested environments : xampp 8.0.13 Windows 
   ♥ from Thoothukudi,Tamilnadu,India.
+  
+  #GET STARTED:
+  1.Download the Packages and Extract in your server directory
+  2.https://sodiumchloride.in/tutorials/
+  
+  Tools:
+  1.Data visualization :
+       To create the graphs
+    command:
+        GraphName->x,y
+    available graphs:
+        1.Line
+        2.Line_markers
+        3.Line_fill
+        4.Line_fill_markers
+        5.Pie
+        6.Scatter
+        7.Bar
+        8.Stacked_bar
+        9.Horizontal_bar
+        10.Histogram
+        
+   2.Statistics :
+          To make statistical operations with the data.
+     Command:
+          Method->x
+     available methods:
+          1.Mean
+          2.Median
+          3.Mode
+          4.Std_deviation (Standard deviation)
+          5.Variance
+          
+    3.Linear regression:
+        To create linear model
+      command:
+        Feature_x,Feature_y->given_value,? ( Prediction dependant on x )
+                   OR
+        Feature_x,Feature_y->?,given_value  ( Prediction dependant on y )
+      Note :
+        Our model always take x as Feature_y and y as Feature_x while Prediction depending on y.
+        
+     4.Polynomial regression:
+        To create polynomial model
+      command:
+        Feature_x,Feature_y->given_value,? ( Prediction dependant on x )
+                   OR
+        Feature_x,Feature_y->?,given_value  ( Prediction dependant on y )
+      Note :
+        Our model always take x as Feature_y and y as Feature_x while Prediction depending on y.
+        
