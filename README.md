@@ -10,8 +10,8 @@
  developers contact  : marimuthu@sodiumchloride.in , mukila@sodiumchloride.in\
  used                : HTML,CSS,JS,Php,Python\
  Heart               : Php and Python\
- Python libraries    : numpy,pandas,scikit-learn,matplotlib,plotly,xlrd,kaleido-0.2.1,openpyxl\
- tested environments : xampp 8.0.13 Windows
+ Python libraries    : numpy,pandas,scikit-learn,matplotlib,plotly and their requirement libraries\
+ tested environments : xampp 8.0.13 Windows , xampp 8.0.13 Linux ubuntu 20.04
  <br/>♥ from Thoothukudi,Tamilnadu,India.**
  ***
   
