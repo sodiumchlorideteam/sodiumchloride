@@ -8,16 +8,7 @@ $fetched_file = FetchFile::__init__();
 $file         = $fetched_file[0];
 $n            = $fetched_file[1];
 
-//download the file
-if (!isset($_GET['delete']) and  isset($_GET['url']) and isset($_GET['id'])){
-if (DownloadFile::download($_GET['url'],$_GET['id'])) {
-    header("location:".$directory->uploads);
-}
-else{
-    echo "<h2 style='color:red;'>some error  occurred</h2>";
-    die();
-}
-}
+
 //delete the file
 if (isset($_GET['delete']) and  isset($_GET['url']) and isset($_GET['id'])){
     $delete    = new DeleteFile();

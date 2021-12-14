@@ -23,7 +23,6 @@ public $view;
 
 public static function LOAD(){
    $directory = new self();
-   $directory ->lab = $sodium = '/sodiumchloride';
    $directory ->assets = __DIR__.'/assets/';
    $directory ->controller = __DIR__.'/controller';
    $directory->error    = __DIR__.'/error/template';
@@ -35,7 +34,6 @@ public static function LOAD(){
    $directory ->view  = $view = __DIR__.'/view';
    $directory ->galaxies = $view."/Galaxies/";
    $directory ->stars = $view."/Stars/";
-   $directory ->uploads = $sodium.'/uploads'; 
    $directory->uploaded = __DIR__.'/uploads';
    return $directory; 
 }

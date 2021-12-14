@@ -1,6 +1,5 @@
 <?php
 namespace Route\Class;
-use Universe\Class\Universe;
 use Error\Class\Error;
 /**
  * 
@@ -11,55 +10,63 @@ class Router
  public static function GET($path ,int $call,callable $function,array $parameters = null)
  {
 
-    $directory   = $GLOBALS['directory'];
-    $root        = $GLOBALS['root'];
+    $directory   = $GLOBALS['directory']; 
     $status_code = 404;
-    $path = rtrim($root.$path,"/");
-
-    if ($parameters != null) {
-   for ($i=0; $i < count($parameters); $i++) { 
-      if (isset($_GET[$parameters[$i]])) {
-       $path .= "&{$parameters[$i]}={$_GET[$parameters[$i]]}";
-    }
-    }
- }
-    if ($GLOBALS['REQUESTED_PATH'] == $path) {
-       $function(); 
+    $requested_path  = self::PATH_BUILDER($GLOBALS['CURRENT_DIRECTORY'],$GLOBALS['REQUESTED_PATH']);
+    if ($requested_path == $path) {
        $status_code = 200;
+       $function();
        die();
-       return true;  
+       return true;
     }
+
     if ($call == 1 and $status_code == 404) {
       Error::RETURN_ERROR(404);
     }
     return false;
- }
+     }
 
  public static function POST($path ,int $call,callable $function,array $parameters = null)
  {
-    $directory = $GLOBALS['directory'];
-    $root        = $GLOBALS['root'];
+    $directory   = $GLOBALS['directory']; 
     $status_code = 404;
-    $path = rtrim($root.$path,"/");
-
-    if ($GLOBALS['REQUESTED_PATH'] == $path) {
+    $requested_path  = self::PATH_BUILDER($GLOBALS['CURRENT_DIRECTORY'],$GLOBALS['REQUESTED_PATH']);
+   
+    if ($requested_path == $path) {
        $status_code = 200;
-    if ($parameters != null) {
-       for ($i=0; $i < count($parameters); $i++) { 
-          if (Universe::EMPTY_OR_NULL($parameters[$i])){
-             ECHO '<p style = "color:red;">'.Error::RETURN_ERROR(204,"No load").'</p>';
-             die();
-             return false;
-          }
-       }
-    }
        $function();
        die();
-       return true;   
+       return true;
     }
+
     if ($call == 1 and $status_code == 404) {
       Error::RETURN_ERROR(404);
     }
     return false;
  }
+
+ private static function PATH_BUILDER($curr_directory,$url)
+{ 
+   $url =rtrim($url,"/");
+   $url = explode("/",$url);
+   $n   = count($url);
+   $path = "/";
+   $started = false;
+ 
+   for ($i=0; $i < $n ; $i++) { 
+      if ($started == true) {
+         if ($i+1 == $n) {
+           $path .= $url[$i];
+         }
+         else{
+         $path .= $url[$i]."/";
+      }
+      }
+      if ($curr_directory == $url[$i]) {
+         $started = true;
+      }
+   }
+   return $path;
+}
+
 }
