@@ -2,7 +2,6 @@
 <html>
 <?php 
 use Loader\Class\Load; 
-use View\Class\LabTemplate;
 use View\Class\FetchFileToHTML;
 use View\Class\ExampleCommands;
 

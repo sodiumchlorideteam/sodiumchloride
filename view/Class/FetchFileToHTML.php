@@ -17,14 +17,17 @@ class FetchFileToHTML
 	}
 	private static  function option_html($n,$file_data)
 	{
-		     $option_html = "";    
-     for ($k=0; $k < $n; $k++) { 
-        $file_name = $file_data[$k][0]["file name"];
-        $_SESSION[$file_name] = $file_data[$k][0];
-
-
-        $option_html      .= "<option>".$file_name."</option>";
+		     $option_html = ""; 
+			 if($n > 0){
+				 for ($k=0; $k < $n; $k++) { 
+					 $file_name = $file_data[$k][0]["file name"];
+					 $_SESSION[$file_name] = $file_data[$k][0];
+					 $option_html      .= "<option>".$file_name."</option>";
            }
+		}
+		else{
+			$option_html    = "<option>No files to show</option>";
+		}
         return $option_html;  
            
 	}
