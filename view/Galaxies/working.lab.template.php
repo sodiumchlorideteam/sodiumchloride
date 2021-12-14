@@ -38,7 +38,7 @@ $commands       = exampleCommands::create($page_number);
 </head>
 <body>
   <ul  class="top_bar">
-    <p onclick="window.location.href='<?php echo $directory ->lab;  ?>';" style="cursor:pointer;">
+    <p onclick="window.location.href='<?php echo $directory ->root;  ?>';" style="cursor:pointer;">
       &larr;
     </p>
     <h3 style="  font-family: 'Josefin Sans', sans-serif;text-transform:uppercase;">
