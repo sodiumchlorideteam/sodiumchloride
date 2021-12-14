@@ -13,7 +13,7 @@ $commands       = exampleCommands::create($page_number);
 ?>
 <head>
   <title><?php echo $page[$page_number]; ?></title>
-      <link rel="icon shortcut" type="image/png" href='<?php echo $GLOBALS["protocal"].$GLOBALS["host"]."/datatopoint/assets/images/logo/sodiumchloride.png";?>'>
+  <link rel="icon shortcut" type="image/png" href='<?php echo $GLOBALS["WORKING_PATH"]."/assets/images/logo/sdcl-png.png";?>'>
       <script src="https://kit.fontawesome.com/01902bbe93.js" crossorigin="anonymous"></script>
 	<style type="text/css">
         <?php Load::css("dv.css");  

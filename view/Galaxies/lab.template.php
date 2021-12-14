@@ -5,7 +5,7 @@ use Loader\Class\Load;
 <html>
 <head>
 	<title>Explore lab !</title>
-		<link rel="icon shortcut" type="image/png" href='<?php echo $GLOBALS["protocal"].$GLOBALS["host"]."/datatopoint/assets/images/logo/sodiumchloride.png";?>'>
+		<link rel="icon shortcut" type="image/png" href='<?php echo $GLOBALS["WORKING_PATH"]."/assets/images/logo/sdcl-png.png";?>'>
 	<style type="text/css">
 		<?php Load::css("lab.css"); ?>
 	</style>
