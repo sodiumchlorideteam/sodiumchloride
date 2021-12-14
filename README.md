@@ -1,27 +1,26 @@
 # sodiumchloride
- Project name        : sodium chloride
- objective           : Explore,Experiment your data with datascience and machine learning 
- version             : beta 0.1.0
- released on         : 13/12/2021
- last update         : 13/12/2021
- official website    : https://sodiumchloride.in
- official email      : official@sodiumchloride.in , sodiumchloride.in@gmail.com
- developers contact  : marimuthu@sodiumchloride.in , mukila@sodiumchloride.in
- used                : HTML,CSS,JS,Php,Python
- Heart               : Php and Python
- Python libraries    : numpy,pandas,scikit-learn,matplotlib,plotly,xlrd,kaleido-0.2.1,openpyxl
- tested environments : xampp 8.0.13 Windows 
-  ♥ from Thoothukudi,Tamilnadu,India.
+***
+ **Project name        : sodium chloride\
+ objective           : Explore,Experiment your data with datascience and machine learning \
+ version             : beta 0.1.0\
+ released on         : 13/12/2021\
+ last update         : 13/12/2021\
+ official website    : https://sodiumchloride.in<br/>
+ official email      : official@sodiumchloride.in , sodiumchloride.in@gmail.com\
+ developers contact  : marimuthu@sodiumchloride.in , mukila@sodiumchloride.in\
+ used                : HTML,CSS,JS,Php,Python\
+ Heart               : Php and Python\
+ Python libraries    : numpy,pandas,scikit-learn,matplotlib,plotly,xlrd,kaleido-0.2.1,openpyxl\
+ tested environments : xampp 8.0.13 Windows
+ <br/>♥ from Thoothukudi,Tamilnadu,India.**
+ ***
   
-  #GET STARTED:
-  1.Download the Packages and Extract in your server directory
-  2.https://sodiumchloride.in/tutorials/
+  **GET STARTED**\
+  1.Download the Package and Extract in your server directory\
   
-  
-  
-  
+  ```
   Tools:
-  1.Data visualization :
+  1.Data visualization:
        To create the graphs
     command:
         GraphName->x,y
@@ -37,9 +36,9 @@
         9.Horizontal_bar
         10.Histogram
         
-   2.Statistics :
+   2.Statistics:
           To make statistical operations with the data.
-     Command:
+     command:
           Method->x
      available methods:
           1.Mean
@@ -65,4 +64,5 @@
         Feature_x,Feature_y->?,given_value  ( Prediction dependant on y )
       Note :
         Our model always take x as Feature_y and y as Feature_x while Prediction depending on y.
+        
         
