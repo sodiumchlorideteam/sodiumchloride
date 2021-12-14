@@ -12,6 +12,14 @@ require_once __DIR__."/vendor/autoload.php";
 /**
  *
  */
+use App\Class\Env\Env;
+/**
+ *
+ */
+(new Env(__DIR__ . '/.env'))->load();
+/**
+ *
+ */
 require_once __DIR__.'/root.directory.php';
 /**
  * 

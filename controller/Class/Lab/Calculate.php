@@ -29,6 +29,7 @@ public static function calculate($from){
 public static function __call__python__($python_data,$file_name,$file_path,$todo_json,$from)
 {
    $plot_path   = $GLOBALS['directory']->plots;
+   $python      = getenv("PYTHON_CALL");
    $py_location = $python_data[0];
    $py_modules  = $python_data[1];
    $py_library  = $python_data[2];
@@ -36,11 +37,11 @@ public static function __call__python__($python_data,$file_name,$file_path,$todo
 //call python
    if ($from == "linear" or $from == "polynomial" or $from == "data-visualization")
    {
-      $execute = shell_exec('python '.$py_location.' 2>&1 '.$py_modules.' '.$py_library.' '.$file_name.' '.$file_path.' '.$from.' '.$plot_path.' '.$todo_json.' ');
+      $execute = shell_exec($python.' '.$py_location.' 2>&1 '.$py_modules.' '.$py_library.' '.$file_name.' '.$file_path.' '.$from.' '.$plot_path.' '.$todo_json.' ');
    } 
    else
    {
-   $execute = shell_exec('python '.$py_location.' 2>&1 '.$py_modules.' '.$py_library.' '.$file_name.' '.$file_path.' '.$from.' '.$todo_json.' ');
+   $execute = shell_exec($python.' '.$py_location.' 2>&1 '.$py_modules.' '.$py_library.' '.$file_name.' '.$file_path.' '.$from.' '.$todo_json.' ');
    }
    return $execute;
 }
