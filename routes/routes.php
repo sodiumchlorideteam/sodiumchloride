@@ -28,17 +28,9 @@ Router::GET("/polynomial-regression",0,function(){
    Load::view("Galaxies/working.lab");
 });
 
-Router::GET("/uploads",0,function(){
+Router::GET("/uploads",1,function(){
  Load::view("Galaxies/upload");
 });
-
-Router::GET("/uploads/?upload",0,function(){
- Load::view("Galaxies/upload");
-});
-
-Router::GET("/uploads/?delete",1,function(){
- Load::view("Galaxies/upload");
-},array("url","id"));
 }
 
 elseif ($method == "POST") {
