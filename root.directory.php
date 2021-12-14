@@ -28,7 +28,7 @@ public static function LOAD(){
    $directory->error    = __DIR__.'/error/template';
    $directory ->model  = __DIR__.'/model';
    $directory ->modules = __DIR__.'/modules';
-   $directory ->plots   = __DIR__.'\plots';
+   $directory ->plots   = __DIR__.'/plots/';
    $directory ->python_files = __DIR__."/python/files/";
    $directory ->python_library = __DIR__."/python/libraries/";
    $directory ->view  = $view = __DIR__.'/view';

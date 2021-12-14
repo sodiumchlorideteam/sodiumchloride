@@ -43,7 +43,7 @@ def plot_it(who,plot_path,x,y,x_label_array,y_label_array,calc_template,given_va
 		plt.ylabel(y_label_array[0])
 		plt.plot([int(x_plot)],[int(y_plot)],marker = 'o')
 	file_name = str(time.time())+".png"
-	plt.savefig(str(plot_path)+"\\"+file_name)
+	plt.savefig(str(plot_path)+file_name)
 	return file_name
 
 
@@ -62,7 +62,7 @@ class data_visualization:
 				plt.plot(file_data[i][0].values,file_data[i][1].values,label=labels)
 			plt.legend(loc='best')
 			file_name = str(time.time())+".line"+".png"
-			plt.savefig(str(plot_path)+"\\"+file_name)
+			plt.savefig(str(plot_path)+file_name)
 			return file_name
 		elif graph.lower() == "line_markers":
 			for i in range(len(label_array)):
@@ -70,7 +70,7 @@ class data_visualization:
 				plt.plot(file_data[i][0].values,file_data[i][1].values,label=labels,marker = 'o')
 				plt.legend(loc='best')
 			file_name = str(time.time())+".line"+".markers"+".png"
-			plt.savefig(str(plot_path)+"\\"+file_name)
+			plt.savefig(str(plot_path)+file_name)
 			return file_name
 		elif graph.lower() == "line_fill":
 			for i in range(len(label_array)):
@@ -79,7 +79,7 @@ class data_visualization:
 				plt.fill_between(file_data[i][0].values,file_data[i][1].values)
 				plt.legend(loc='best')
 			file_name = str(time.time())+".line"+".fill"+".png"
-			plt.savefig(str(plot_path)+"\\"+file_name)
+			plt.savefig(str(plot_path)+file_name)
 			return file_name
 		elif graph.lower() == "line_fill_markers":
 			for i in range(len(label_array)):
@@ -88,7 +88,7 @@ class data_visualization:
 				plt.fill_between(file_data[i][0].values,file_data[i][1].values)
 				plt.legend(loc='best')
 			file_name = str(time.time())+".line"+".fill"+".png"
-			plt.savefig(str(plot_path)+"\\"+file_name)
+			plt.savefig(str(plot_path)+file_name)
 			return file_name
 		elif graph.lower() == "pie":
 			for i in range(len(label_array)):
@@ -97,7 +97,7 @@ class data_visualization:
 				fig1, ax1 = plt.subplots()
 				ax1.pie(data, labels=label, autopct='%1.1f%%')
 			file_name = str(time.time())+".pie"+".png"
-			plt.savefig(str(plot_path)+"\\"+file_name)
+			plt.savefig(str(plot_path)+file_name)
 			return file_name
 		elif graph.lower() == "scatter":
 			for i in range(len(label_array)):
@@ -105,7 +105,7 @@ class data_visualization:
 				plt.scatter(file_data[i][0].values,file_data[i][1].values,label=labels)
 				plt.legend(loc='best')
 			file_name = str(time.time())+".scatter"+".png"
-			plt.savefig(str(plot_path)+"\\"+file_name)
+			plt.savefig(str(plot_path)+file_name)
 			return file_name
 		elif graph.lower() == "bar":
 			bar = []
@@ -115,7 +115,7 @@ class data_visualization:
 				bar.append(go.Bar(name =label_array[i][1],x=x, y=y,text=y,textposition='auto'))
 			fig = go.Figure(data=bar)
 			file_name = str(time.time())+".bar"+".png"
-			fig.write_image(str(plot_path)+"\\"+file_name)
+			fig.write_image(str(plot_path)+file_name)
 			return file_name
 		elif graph.lower() == "stacked_bar":
 			for i in range(len(label_array)):
@@ -126,7 +126,7 @@ class data_visualization:
 			plt.xlabel(label_array[0][0])
 			plt.legend()
 			file_name = str(time.time())+".stacked_bar"+".png"
-			plt.savefig(str(plot_path)+"\\"+file_name)
+			plt.savefig(str(plot_path)+file_name)
 			return file_name
 		elif graph.lower() == "horizontal_bar":
 			bar = []
@@ -136,7 +136,7 @@ class data_visualization:
 				bar.append(go.Bar(name =label_array[i][0],x=x, y=y,text=x,textposition='auto',orientation='h'))
 			fig = go.Figure(data=bar)
 			file_name = str(time.time())+".h_bar"+".png"
-			fig.write_image(str(plot_path)+"\\"+file_name)
+			fig.write_image(str(plot_path)+file_name)
 			return file_name
 		elif graph.lower() == "histogram":
 			bar = []
@@ -146,5 +146,5 @@ class data_visualization:
 				bar.append(go.Histogram(name =label_array[i][0],x=x))
 			fig = go.Figure(data=bar)
 			file_name = str(time.time())+".histogram"+".png"
-			fig.write_image(str(plot_path)+"\\"+file_name)
+			fig.write_image(str(plot_path)+file_name)
 			return file_name
