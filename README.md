@@ -12,7 +12,7 @@
  Heart               : Php and Python\
  Python libraries    : numpy,pandas,scikit-learn,matplotlib,plotly and their requirement libraries\
  tested environments : xampp 8.0.13 Windows , xampp 8.0.13 Linux ubuntu 20.04
- <br/>♥ from Thoothukudi,Tamilnadu,India.**
+ <br/>♥ from India.**
  ***
   
   **GET STARTED**\
