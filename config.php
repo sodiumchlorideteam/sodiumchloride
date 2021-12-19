@@ -19,7 +19,7 @@ $directory->uploaded   = __DIR__.'/uploads';
 /**
 * SERVER RESOURCES
 */
- $PROTOCAL       = $protocal       = (empty($_SERVER['HTTPS'])) ? "http://":"https://" ;
+ $PROTOCAL       = $protocal       = ($_ENV['HTTPS_ON']) ? "https://":"http://" ;
  $HOST           = $host           = $_SERVER["HTTP_HOST"];
  $REQUESTED_PATH = $requested_path = parse_url(Universe::CLEAN_URL($_SERVER['REQUEST_URI']),PHP_URL_PATH);
  $METHOD         = $method         = $_SERVER['REQUEST_METHOD'];
