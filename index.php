@@ -20,12 +20,8 @@ use App\Class\Env\Env;
 /**
  *
  */
-require_once __DIR__.'/root.directory.php';
-/**
- * 
- */
 require_once __DIR__.'/config.php';
 /**
  * 
  */
-require_once __DIR__.'/next.index.php';
+require_once __DIR__."/routes/routes.php";

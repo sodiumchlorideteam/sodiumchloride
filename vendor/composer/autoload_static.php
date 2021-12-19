@@ -21,7 +21,6 @@ class ComposerStaticInit9cb725abe8adedad77d79d990c0a4489
         ),
         'M' => 
         array (
-            'Modules\\' => 8,
             'Model\\' => 6,
         ),
         'L' => 
@@ -35,41 +34,42 @@ class ComposerStaticInit9cb725abe8adedad77d79d990c0a4489
         'A' => 
         array (
             'App\\' => 4,
+            'AppData\\' => 8,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
         'View\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/view',
+            0 => __DIR__ . '/../..' . '/views',
         ),
         'Universe\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/universe',
+            0 => __DIR__ . '/../..' . '/app/universe',
         ),
         'Route\\' => 
         array (
             0 => __DIR__ . '/../..' . '/routes',
         ),
-        'Modules\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/modules',
-        ),
         'Model\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/model',
+            0 => __DIR__ . '/../..' . '/app/model',
         ),
         'Loader\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/loader',
+            0 => __DIR__ . '/../..' . '/app/loader',
         ),
         'Error\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/error',
+            0 => __DIR__ . '/../..' . '/app/error',
         ),
         'App\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/controller',
+            0 => __DIR__ . '/../..' . '/app/controllers',
+        ),
+        'AppData\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/app_data',
         ),
     );
 

@@ -75,7 +75,7 @@ class statistics:
 
 	def output(method,maxi,mini,answer):
 		if method == "mode" :
-			output = "<h4>maximum : "+str(maxi)+"</h4><h4>minimum : "+str(mini)+"</h4><h4>mode value : "+str(answer[0][0])+"</h4><h4>number of times it has been sorted : "+str(answer[1][0])+"</h4>"
+			output = "<p>maximum : "+str(maxi)+"</p><p>minimum : "+str(mini)+"</p><p>mode value : "+str(answer[0][0])+"</p><p>number of times it has been sorted : "+str(answer[1][0])+"</p>"
 		else:
-			output = "<h4>maximum : "+str(maxi)+"</h4><h4>minimum : "+str(mini)+"</h4><h4>"+str(method)+" : "+str(answer)+"</h4>"
+			output = "<p>maximum : "+str(maxi)+"</p><p>minimum : "+str(mini)+"</p><p>"+str(method)+" : "+str(answer)+"</p>"
 		return output

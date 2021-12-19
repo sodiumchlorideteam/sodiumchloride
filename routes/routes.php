@@ -1,4 +1,5 @@
 <?php 
+session_start();
 use Route\Class\Router;
 use Loader\Class\Load;
 

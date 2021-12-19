@@ -4,14 +4,14 @@
     },
 	"autoload":{
 		"psr-4":{
-			"App\\":"controller/",
+			"App\\":"app/controllers/",
+			"AppData\\":"app/app_data/",
 			"Route\\":"routes/",
-			"Model\\":"model/",
-			"Modules\\":"modules/",
-			"View\\":"view/",
-			"Universe\\":"universe/",
-			"Error\\":"error/",
-			"Loader\\":"loader/"
+			"Model\\":"app/model/",
+			"View\\":"views/",
+			"Universe\\":"app/universe/",
+			"Error\\":"app/error/",
+			"Loader\\":"app/loader/"
 		}
 	}
 }
