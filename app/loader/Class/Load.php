@@ -47,4 +47,17 @@ class Load
      }
      return true;
   } 
+
+  public static function error(string $file,int $code)
+  {
+     $directory  = $GLOBALS['directory'];
+     if (file_exists($directory->error."/".$file.".php")) {
+        require_once $directory->error."/".$file.".php";
+     }
+     else{
+        Error::RETURN_ERROR(404);
+        return false;
+     }
+     return true;
+  }
 }

@@ -65,6 +65,14 @@ class Router
       if ($curr_directory == $url[$i]) {
          $started = true;
       }
+      if ($started == false and $i+1 == $n) {
+         $path = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
+         if($path=="/"){
+                 return $path;
+         }
+         return rtrim($path,"/");
+      }
+     
    }
    return $path;
 }
