@@ -53,8 +53,6 @@
         Feature_x,Feature_y->given_value,? ( Prediction dependant on x )
                    OR
         Feature_x,Feature_y->?,given_value  ( Prediction dependant on y )
-      Note :
-        Our model always take x as Feature_y and y as Feature_x while Prediction depending on y.
         
      4.Polynomial regression:
         To create polynomial model
@@ -62,7 +60,3 @@
         Feature_x,Feature_y->given_value,? ( Prediction dependant on x )
                    OR
         Feature_x,Feature_y->?,given_value  ( Prediction dependant on y )
-      Note :
-        Our model always take x as Feature_y and y as Feature_x while Prediction depending on y.
-        
-        
