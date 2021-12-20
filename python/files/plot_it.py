@@ -1,24 +1,16 @@
 def plot_it(who,plot_path,x,y,x_label_array,y_label_array,calc_template,given_value,prediction,prediction_based_on):
-	if prediction_based_on == "y":
-		x,y    = y,x
-		x_label_array,y_label_array = y_label_array,x_label_array
-	x_plot = given_value
-	y_plot = prediction
+	if prediction_based_on == "x":
+		x_plot = given_value
+		y_plot = prediction
+	else:
+		x_plot = prediction	
+		y_plot = given_value
 	try:
 		import matplotlib.pyplot as plt
 		import time
 	except Exception as e:
 		print("<p style='color:red;'>"+str(e)+"</p>")
 		exit()
-	#Sorting
-	x.sort()
-	y.sort()
-	x_high = x[len(x)-1]
-	y_high = y[len(y)-1]
-	if x[0] < y[0]:
-		low_all = x[0]
-	else:
-		low_all = y[0]
 	if who == "linear" :
 		try:
 			from scipy import stats
@@ -29,19 +21,27 @@ def plot_it(who,plot_path,x,y,x_label_array,y_label_array,calc_template,given_va
 		plt.plot(x,calc_template)
 		plt.xlabel(x_label_array[0])
 		plt.ylabel(y_label_array[0])
-		plt.plot([int(x_plot)],[int(y_plot)],marker = 'o')
+		plt.plot([float(x_plot)],[float(y_plot)],marker = 'o')
 	if who =="polynomial":
+		x_sort = sorted(x)
+		y_sort = sorted(y)
+		x_high = x_sort[len(x_sort)-1]
+		y_high = y_sort[len(y_sort)-1]
+		if x_sort[0] < y_sort[0]:
+			low_all = x_sort[0]
+		else:
+			low_all = y_sort[0]
 		try:
 			import numpy 
 		except Exception as e:
 			print("<p style='color:red;'>"+str(e)+"</p>")
 			exit()
-		myline = numpy.linspace(int(low_all),int(x_high),int(y_high))
+		myline = numpy.linspace(low_all,x_high,y_high)
 		plt.scatter(x,y)
 		plt.plot(myline,calc_template(myline))
 		plt.xlabel(x_label_array[0])
 		plt.ylabel(y_label_array[0])
-		plt.plot([int(x_plot)],[int(y_plot)],marker = 'o')
+		plt.plot([float(x_plot)],[float(y_plot)],marker = 'o')
 	file_name = str(time.time())+".png"
 	plt.savefig(str(plot_path)+file_name)
 	return file_name

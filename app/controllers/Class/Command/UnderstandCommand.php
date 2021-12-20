@@ -118,11 +118,17 @@ public static function __input__validate__($predict,$from)
 
 public static function __return__json__($labels,$predict,$from){
  if ($from == 'linear' or $from == 'polynomial') {
+  $labels[0]     = str_replace(" ","",$labels[0]);
+  $labels[1]     = str_replace(" ","",$labels[1]);
+  $predict[0]    = str_replace(" ","",$predict[0]);
+  $predict[1]    = str_replace(" ","",$predict[1]);
+
  $prepare_json = '{\"label-x-0\":\"'.$labels[0].'\",\"label-y-0\":\"'.$labels[1].'\",\"value-x\":\"'.$predict[0].'\",\"value-y\":\"'.$predict[1].'\"}';
- #$prepare_json = "{'label-x':'{$labels[0]}','label-y':'{$labels[1]}'}";
  }
 
  elseif($from == 'statistics'){
+  $labels     = str_replace(" ","",$labels);
+  $predict    = str_replace(" ","",$predict);
  $prepare_json = '{\"method\":\"'.$labels.'\",\"label\":\"'.$predict.'\"}';
  }
  return $prepare_json;

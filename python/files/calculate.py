@@ -2,9 +2,6 @@ def predict(x,y,prediction_based_on,given_value,who):
 	#swaping
 	if prediction_based_on == 'y':
 		x,y = y,x
-	#Sorting
-	x.sort()
-	y.sort()
 	if who == 'linear':
 		try:
 			from scipy import stats
@@ -14,6 +11,8 @@ def predict(x,y,prediction_based_on,given_value,who):
 		slope, intercept, r, p, std_err = stats.linregress(x, y)
 		def __cal_tem__(gv):
 			return slope * float(gv) + intercept
+		if prediction_based_on == 'y':
+			x,y = y,x
 		calc_template  = list(map(__cal_tem__, x))
 		predict = __cal_tem__(given_value)
 
@@ -26,8 +25,11 @@ def predict(x,y,prediction_based_on,given_value,who):
 			exit()
 		#predicting
 		calc_template = numpy.poly1d(numpy.polyfit(x, y, 3))
-		predict       = calc_template(int(given_value))
+		predict       = calc_template(float(given_value))
 		r             = r2_score(y,calc_template(x))
+		if prediction_based_on == 'y':
+			x,y = y,x
+			calc_template = numpy.poly1d(numpy.polyfit(x, y, 3))
 	return predict,r,calc_template
 
 def relationship(r):
