@@ -2,10 +2,10 @@
 /**
  * @package sodium chloride
  * @author Marimuthu @ www.sodiumchloride.in , Mukila @ www.sodiumchloride.in.
- * @version beta 0.1.1
+ * @version beta 0.1.2
  * @return website https://sodiumchloride.in
  * @return developer contact marimuthu@sodiumchloride.in , mukila@sodiumchloride.in
- * @return ♥ from Thoothukudi,Tamilnadu,India.
+ * @return ♥ from India.
  * @return true
  */
 require_once __DIR__."/vendor/autoload.php";
