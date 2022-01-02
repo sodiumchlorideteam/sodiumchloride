@@ -92,10 +92,10 @@
 }
 
 ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0;
+    background: transparent;
 }
-/* Optional: show position indicator in red */
+
 ::-webkit-scrollbar-thumb {
     background: #fff;
 }
@@ -165,6 +165,7 @@ progress::-webkit-progress-bar {
   font-family: sans-serif;
  font-size:15px;
   border-bottom:solid 1px #dddddd;
+  background-color:#fff;
 }
 .table-first td{
 	border: 1px solid #dddddd !important;
@@ -172,7 +173,7 @@ progress::-webkit-progress-bar {
   text-align:center;
   font-family: sans-serif;
  font-size:15px !important;
- background-color:#1e1c1b;
+ background-color: #282360 !important;
  color:#fff;
 
 }

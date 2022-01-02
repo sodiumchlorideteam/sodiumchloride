@@ -54,11 +54,9 @@ if ($n == 0 ){
 ?>
 
 <div id="root-root-upload" class="container-fluid">
-    <button  style="background-color:#fff;border:solid 1px #fff;color:#000;display:block;outline:none;">
-                <h3 style="color:#423838;">no files to show !</h3>
-                <br/>
-                <?php if(!isset($_GET['upload'])){?>
-                <span onclick="window.location.href='?upload';"><?php  Load::view("Stars/emoji.php",true); ?></span>
+    <button  style="background-color:#EEE4E4;border:solid 1px #EEE4E4;color:#000;display:block;outline:none;">
+    <?php if(!isset($_GET['upload'])){?>
+               <img src="<?php Load::assets("images/file.png");?>" width="70%">
                 <?php }?>
     </button>
 </div>

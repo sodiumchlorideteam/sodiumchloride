@@ -4,9 +4,9 @@ use Loader\Class\Load;
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Explore lab !</title>
+	<title>sodium chloride </title>
 	<link rel="icon shortcut" type="image/png" href='<?php Load::assets("images/logo/sdcl-png.png");?>'>
-   <link rel="stylesheet" type="text/css" href="<?php Load::assets("css/lab.css"); ?>">
+   <link rel="stylesheet" type="text/css" href="<?php Load::assets("css/dashboard.css"); ?>">
 	<script src="https://kit.fontawesome.com/01902bbe93.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -14,7 +14,7 @@ use Loader\Class\Load;
     <div class="main_content">
         <div id="lab-box">
             <ul id = "ds-tools">
-               <button class="btn btn-primary">Datascience</button> 
+               <button class="btn btn-primary">Tools</button> 
                <li class ="tool-box">
 		         <a href="./data-visualization/" class="root-root-equipments-tools" target="_blank">
 	                <div>
@@ -33,7 +33,6 @@ use Loader\Class\Load;
                </li>
             </ul>
             <ul id = "ml-tools">
-               <button class="btn btn-primary">Machine Learning</button> 
                <li class ="tool-box">
 		         <a href="./linear-regression/" class="root-root-equipments-tools" target="_blank">
 	                <div>

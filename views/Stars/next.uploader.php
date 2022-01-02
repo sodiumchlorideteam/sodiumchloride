@@ -53,8 +53,8 @@
 .upload-upload-input input[type="submit"]{
 	margin-left:2%;
 	border-radius:0px;
-	background-color:#1e1c1b;
-	border-color:#1e1c1b;
+	background-color:#282360;
+	border-color:#282360;
 	width:50%;
 }
 @media screen and (max-width: 661px){
@@ -167,7 +167,7 @@ $('#uploadStatus').empty();
 <div id="root-upload-upload">
 	<ul class="upload-upload-input">
 	<form id="uploadForm" enctype="multipart/form-data">
-		<input type="file" name="file" id="file"  required onChange="validate(this.value)">
+		<input type="file" name="file" id="file"   onChange="validate(this.value)">
 		<br/>
 		<br/>
 		<div class="percent"></div>
@@ -180,7 +180,7 @@ $('#uploadStatus').empty();
 			<a  class="btn btn-light" onclick="window.location.href='<?php echo $directory ->uploads;  ?>';">
 						cancel
 		   </a>
-		<input type="submit" class="btn btn-primary" value="Upload">
+		<input type="submit" class="btn btn-primary" value="upload">
 	   </div>
 	</form>
 	<br/>

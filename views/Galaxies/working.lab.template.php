@@ -15,7 +15,6 @@ $commands       = exampleCommands::create($page_number);
   <link rel="icon shortcut" type="image/png" href='<?php Load::assets("images/logo/sdcl-png.png");?>'>
   <script src="https://kit.fontawesome.com/01902bbe93.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="<?php Load::assets('css/dv.css'); ?>">
-  <link rel="stylesheet" type="text/css" href="<?php Load::assets('css/navigation.css'); ?>">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
  <script type="text/javascript">
    function close_window() {
@@ -49,7 +48,7 @@ $commands       = exampleCommands::create($page_number);
          <br/>
          <details>
           <summary style="color:blue;" onclick="changeArrow()">command 
-            <i class="fas fa-caret-right" style="color:blue;" id="arrow"></i>
+            <i class="fas fa-caret-right" style="color:blue;display:none;" id="arrow"></i>
           </summary>
           <p id="example-commands" style="padding:1%;background-color:#fff;">
             <?php echo $commands; ?>

@@ -6,7 +6,7 @@ use Loader\Class\Load;
 
 if ($method == "GET") {
 Router::GET("/",0,function(){
- Load::view("Galaxies/lab");
+ Load::view("Galaxies/tool");
 });
 
 Router::GET("/data-visualization",0,function(){
