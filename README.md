@@ -3,7 +3,7 @@
  objective           : Explore,Experiment your data with datascience and machine learning \
  version             : beta 0.1.2\
  released on         : 13/12/2021\
- last update         : 29/12/2021\
+ last update         : 02/01/2022\
  official website    : https://sodiumchloride.in<br/>
  official email      : official@sodiumchloride.in , sodiumchloride.in@gmail.com\
  developers contact  : marimuthu@sodiumchloride.in , mukila@sodiumchloride.in\
