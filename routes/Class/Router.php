@@ -9,7 +9,7 @@ class Router
  public $status_code;
  public static function GET($path ,int $call,callable $function,array $parameters = null)
  {
-
+   if ($_SERVER['REQUEST_METHOD'] != "GET") { return false;}
     $directory   = $GLOBALS['directory']; 
     $status_code = 404;
     $requested_path  = self::PATH_BUILDER($GLOBALS['CURRENT_DIRECTORY'],$GLOBALS['REQUESTED_PATH']);
@@ -28,6 +28,7 @@ class Router
 
  public static function POST($path ,int $call,callable $function,array $parameters = null)
  {
+   if ($_SERVER['REQUEST_METHOD'] != "POST") { return false;}
     $directory   = $GLOBALS['directory']; 
     $status_code = 404;
     $requested_path  = self::PATH_BUILDER($GLOBALS['CURRENT_DIRECTORY'],$GLOBALS['REQUESTED_PATH']);

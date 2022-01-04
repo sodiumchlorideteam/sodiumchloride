@@ -3,9 +3,10 @@ session_start();
 use Route\Class\Router;
 use Loader\Class\Load;
 
-
+$_SESSION['IS_ROOT'] = false;
 if ($method == "GET") {
 Router::GET("/",0,function(){
+ $_SESSION['IS_ROOT'] = true;
  Load::view("Galaxies/tool");
 });
 

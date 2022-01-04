@@ -16,12 +16,24 @@ use Loader\Class\Load;
      	<h3>sodium chloride</h3>
        </div>
         <ul>
-          <li><a href="<?php echo $directory ->root;?>"><i class="fa fa-tools"></i> tools</a></li>
-            <li><a href="<?php echo $directory ->uploads;?>"><i class="fas fa-cloud-upload-alt"></i>uploads</a></li>
-            <li><a href="https://sodiumchloride.in/documentation"><i class="fas fa-question-circle"></i>documentation</a></li>
-            <li><a href="https://sodiumchloride.in/#contact"><i class="fas fa-address-book"></i>contact us</a></li>
-            <li><a href="https://sodiumchloride.in/tac"><i class="fas fa-info-circle"></i>terms & conditions</a></li>
-            <li><a href="https://sodiumchloride.in/pp"><i class="fas fa-lock"></i>privacy policy</a></li>
+          <?php  
+          if($_SESSION['IS_ROOT']){
+          ?>
+          <a href="<?php echo $directory ->root;?>" style="background-color:#EEE4E4;"><li  style="color:#000;"><i class="fa fa-tools"></i> tools</li></a>
+          <a href="<?php echo $directory ->uploads;?>"><li><i class="fas fa-cloud-upload-alt"></i>uploads</li></a>
+          <?php 
+          }
+          else{
+          ?>
+          <a href="<?php echo $directory ->root;?>"><li><i class="fa fa-tools"></i> tools</li></a>
+          <a href="<?php echo $directory ->uploads;?>" style="background-color:#EEE4E4;"><li style="color:#000;"><i class="fas fa-cloud-upload-alt"></i>uploads</li></a>
+          <?php 
+          }
+          ?>
+          <a href="https://sodiumchloride.in/documentation"><li><i class="fas fa-question-circle"></i>documentation</li></a>
+          <a href="https://sodiumchloride.in/#contact"><li><i class="fas fa-address-book"></i>contact us</li></a>
+          <a href="https://sodiumchloride.in/tac"><li><i class="fas fa-info-circle"></i>terms & conditions</li></a>
+          <a href="https://sodiumchloride.in/pp"><li><i class="fas fa-lock"></i>privacy policy</li></a>
         </ul>
     </div>
     <script type="text/javascript" src="<?php Load::assets('js/jquery-3.6.0.min.js'); ?>"></script>

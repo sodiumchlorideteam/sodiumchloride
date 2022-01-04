@@ -4,7 +4,7 @@
 
 :root {
   --font: "Inter", sans-serif;
-  --body-color: #637381;
+  --body-color: #EEE4E4;
   --heading-color: #212b36;
   --primary-color: #282360;
   --white: #ffffff;
@@ -38,30 +38,23 @@ body{
     font-size: 25px;
 }
 
-.wrapper .sidebar ul li{
+.wrapper .sidebar ul a{
   padding: 15px;
   border-bottom: 1px solid #bdb8d7;
   border-bottom: 1px solid rgba(0,0,0,0.05);
   border-top: 1px solid rgba(255,255,255,0.05);
 }    
 
-.wrapper .sidebar ul li a{
+.wrapper .sidebar ul a{
   color: #000;
   display: block;
   cursor:pointer;
   font-family: var(--font);
+  text-decoration:none;
 }
 
-.wrapper .sidebar ul li a .fas{
+.wrapper .sidebar ul  a .fas{
   width: 25px;
-}
-
-.wrapper .sidebar ul li:hover{
-  background-color:var(--primary-color);
-}
-    
-.wrapper .sidebar ul li:hover a{
-  color: #fff;
 }
  
 .wrapper .main_content{
