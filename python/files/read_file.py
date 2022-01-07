@@ -1,7 +1,7 @@
 try:
 	import pandas as pd
 except Exception as e:
-	print("<p style='color:red;'>"+str(e)+"</p>")
+	print(str(e))
 	exit()
 
 class data_visualization:
@@ -30,9 +30,9 @@ class data_visualization:
 				mini_data = [file_data[label_data_array[j][0]],file_data[label_data_array[j][1]]]
 				data.append(mini_data)
 			except KeyError as e:
-				print("<p style='color:red;'>given feature "+str(e)+" not found !</p>")
+				print("given feature "+str(e)+" not found !")
 				exit()
-		return graph,label_data_array,data
+		return graph.lower(),label_data_array,data
 
 
 def read_it(file_name,file_path,who,decoded_json,length):
@@ -48,7 +48,7 @@ def read_it(file_name,file_path,who,decoded_json,length):
 		except KeyError:
 			pass
 	if len(x_label_array) != len(y_label_array):
-		print('<p style="color:red;">feature error found !</p>')
+		print('feature error found !')
 		exit()
 	if file_extension == "csv":
 		file_data = pd.read_csv(file_path)
@@ -68,7 +68,7 @@ def __extract__data__(x_label_array,y_label_array,file_data):
 			array = [file_data[x_label_array[k]],file_data[y_label_array[k]]]
 			data.append(array)
 		except KeyError as e:
-			print("<p style='color:red;'>given feature "+str(e)+" not found !</p>")
+			print("given feature "+str(e)+" not found !")
 			exit()
 	return data
 
@@ -93,6 +93,6 @@ class statistics:
 			try:
 				data.append(file_data[label])
 			except KeyError as e:
-				print("<p style='color:red;'>given feature "+str(e)+" not found !</p>")
+				print("given feature "+str(e)+" not found !")
 				exit()
-		return method,label,data
+		return method.lower(),label,data

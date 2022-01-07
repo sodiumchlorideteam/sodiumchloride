@@ -39,19 +39,19 @@ elseif ($method == "POST") {
 @$post_calculate_parameters = array($_POST['file_name'],$_POST['command'],$_POST['from']);
 
 Router::POST("/data-visualization/calculate",0,function(){
-  Load::controller("Galaxies/dv"); 
+   Load::controller("Galaxies/calculate");
 },$post_calculate_parameters);
 
 Router::POST("/statistics/calculate",0,function(){
-   Load::controller("Galaxies/statistics.calculate"); 
+   Load::controller("Galaxies/calculate");
 },$post_calculate_parameters);
 
 Router::POST("/linear-regression/calculate",0,function(){
-   Load::controller("Galaxies/linear.calculate"); 
+   Load::controller("Galaxies/calculate"); 
 },$post_calculate_parameters);
 
 Router::POST("/polynomial-regression/calculate",0,function(){
- Load::controller("Galaxies/polynomial.calculate"); 
+   Load::controller("Galaxies/calculate"); 
 },$post_calculate_parameters);
 
 Router::POST("/uploads/uploadIt",1,function(){

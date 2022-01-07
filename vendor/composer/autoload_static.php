@@ -15,6 +15,10 @@ class ComposerStaticInit9cb725abe8adedad77d79d990c0a4489
         array (
             'Universe\\' => 9,
         ),
+        'S' => 
+        array (
+            'Sodium\\' => 7,
+        ),
         'R' => 
         array (
             'Route\\' => 6,
@@ -46,6 +50,10 @@ class ComposerStaticInit9cb725abe8adedad77d79d990c0a4489
         'Universe\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/universe',
+        ),
+        'Sodium\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Sodium',
         ),
         'Route\\' => 
         array (

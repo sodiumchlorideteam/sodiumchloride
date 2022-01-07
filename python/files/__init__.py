@@ -6,7 +6,7 @@ python_library = sys.argv[2]
 file_name      = sys.argv[3]
 file_path      = sys.argv[4]
 who            = sys.argv[5]
-if who == "linear" or who == "polynomial" or who == "data-visualization":
+if who == "linear_regression" or who == "polynomial_regression" or who == "data_visualization":
 	plot_path = sys.argv[6]
 	json_data = sys.argv[7]
 else :
@@ -21,20 +21,20 @@ try:
 	import read_file
 	import plot_it
 except Exception as e:
-	print("<p style='color:red;'>"+str(e)+"</p>")
+	print(str(e))
 	exit()
 
 #prepare resources
 decoded_json = json.loads(json_data)
 length       = len(decoded_json)
 
-if who == 'data-visualization':
+if who == 'data_visualization':
 	graph,label_array,file_data = read_file.data_visualization.read_file(file_name,file_path,decoded_json)
 	plot                        = plot_it.data_visualization.draw_graph(graph,label_array,file_data,plot_path)
 	result                      = '{"plot path":"'+str(plot)+'"}'
 	print(result)
 
-elif who == 'linear' or who == 'polynomial':
+elif who == 'linear_regression' or who == 'polynomial_regression':
 	x_label_array,y_label_array,file_data = read_file.read_it(file_name,file_path,who,decoded_json,length)
 	if file_data == False:
 		print('unsupported file extension given')
@@ -50,7 +50,7 @@ elif who == 'linear' or who == 'polynomial':
 	try:
 		import calculate	
 	except Exception as e:
-		print("<p style='color:red;'>"+str(e)+"</p>")
+		print(str(e))
 		exit()
 	#calculation
 	prediction,r,calc_template = calculate.predict(x,y,prediction_based_on,given_value,who)

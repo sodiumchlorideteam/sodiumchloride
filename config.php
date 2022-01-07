@@ -15,10 +15,11 @@ $directory->plots    = __DIR__.'/plots/';
 $directory->python   = __DIR__."/python/";
 $directory->views    = __DIR__.'/views';
 $directory->assets   = __DIR__.'/assets/';
-$directory->uploaded   = __DIR__.'/uploads';
+$directory->uploaded   = __DIR__.'/uploads/';
 /**
 * SERVER RESOURCES
 */
+if(!defined("COMMAND_LINE")){
  $PROTOCAL       = $protocal       = ($_ENV['HTTPS_ON']) ? "https://":"http://" ;
  $HOST           = $host           = $_SERVER["HTTP_HOST"];
  $REQUESTED_PATH = $requested_path = parse_url(Universe::CLEAN_URL($_SERVER['REQUEST_URI']),PHP_URL_PATH);
@@ -26,6 +27,7 @@ $directory->uploaded   = __DIR__.'/uploads';
  $WORKING_PATH   = $GLOBALS['directory']->root = $protocal.$host.str_replace("index.php","",$_SERVER['PHP_SELF']);
  $directory->assets   = $WORKING_PATH.'public/';
  $directory->uploads    = $WORKING_PATH."uploads";
+}
  /**
  * PYTHON DATA
  */

@@ -24,4 +24,14 @@ class Error
 }
  	RETURN $message;
  }
+
+ public static function CMD_DISPLAY($message,$is_error = false,$UI=false){
+   if (!$UI) {
+     $message = ($is_error) ? "\033[31m {$message}\033 \e[m \n" : "\033[32m {$message}\033 \e[m \n";;
+   }
+   else{
+      $message = ($is_error) ? "<p style='color:red;'>{$message}</p>":$message ;    
+   }
+   return $message;
+ }
 }

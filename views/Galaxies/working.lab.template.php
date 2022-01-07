@@ -3,12 +3,11 @@
 <?php 
 use Loader\Class\Load; 
 use View\Class\FetchFileToHTML;
-use View\Class\ExampleCommands;
 
 $page           = array("data visualization","statistics","linear regression","polynomial regression");
 $page_number    = $GLOBALS['page_number'];
 $select_element = FetchFileToHTML::Build();
-$commands       = exampleCommands::create($page_number);
+$from           = str_replace(" ","_",$page[$page_number]);
 ?>
 <head>
   <title><?php echo $page[$page_number]; ?></title>
@@ -46,17 +45,10 @@ $commands       = exampleCommands::create($page_number);
       <form enctype="multipart/form-data" id="calc-linear">
     <?php echo $select_element;   ?>
          <br/>
-         <details>
-          <summary style="color:blue;" onclick="changeArrow()">command 
-            <i class="fas fa-caret-right" style="color:blue;display:none;" id="arrow"></i>
-          </summary>
-          <p id="example-commands" style="padding:1%;background-color:#fff;">
-            <?php echo $commands; ?>
-          </p>        
-         </details>
+         <a href="#">command</a>
          <input type="text" name="command" class="form-control" autocomplete="off">
          <br/>
-         <input type="hidden" name="from" value="<?php echo $page[$page_number]; ?>">
+         <input type="hidden" name="from" value="<?php echo $from; ?>">
          <input type="submit" value="calculate" class="btn btn-primary">
       </form>
     </li>
@@ -78,20 +70,5 @@ $commands       = exampleCommands::create($page_number);
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/javascript" src="<?php Load::assets('js/calculate.js'); ?>"></script>
- <script type="text/javascript">
-      /*arrow function*/
-function changeArrow(){
-      var arrow = document.getElementById('arrow');
-
-      if(arrow.classList.contains("fa-caret-right")){
-        arrow.classList.remove("fa-caret-right");
-        arrow.classList.add("fa-sort-down");
-      }
-      else{
-        arrow.classList.remove("fa-sort-down");
-        arrow.classList.add("fa-caret-right");
-      }
-      };
-  </script>
 </body>
 </html>

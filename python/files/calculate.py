@@ -2,11 +2,11 @@ def predict(x,y,prediction_based_on,given_value,who):
 	#swaping
 	if prediction_based_on == 'y':
 		x,y = y,x
-	if who == 'linear':
+	if who == 'linear_regression':
 		try:
 			from scipy import stats
 		except Exception as e:
-			print("<p style='color:red;'>"+str(e)+"</p>")
+			print(str(e))
 			exit()
 		slope, intercept, r, p, std_err = stats.linregress(x, y)
 		def __cal_tem__(gv):
@@ -16,12 +16,12 @@ def predict(x,y,prediction_based_on,given_value,who):
 		calc_template  = list(map(__cal_tem__, x))
 		predict = __cal_tem__(given_value)
 
-	elif who == 'polynomial':
+	elif who == 'polynomial_regression':
 		try:
 			import numpy
 			from sklearn.metrics import r2_score
 		except Exception as e:
-			print("<p style='color:red;'>"+str(e)+"</p>")
+			print(str(e))
 			exit()
 		#predicting
 		calc_template = numpy.poly1d(numpy.polyfit(x, y, 3))
@@ -48,7 +48,7 @@ def relationship(r):
     return message
 
 def prepare_output(prediction,r,who,plot_location):
-	if who == 'linear' or who == 'polynomial':
+	if who == 'linear_regression' or who == 'polynomial_regression':
 		message = relationship(r)
 		output = '{"prediction":"'+str(prediction)+'","r":"'+str(r)+'","message":"'+message+'","plot path":"'+plot_location+'"}'
 		return output		
@@ -58,7 +58,7 @@ class statistics:
 		try:
 			import numpy as np
 		except Exception as e:
-			print("<p style='color:red;'>"+str(e)+"</p>")
+			print(str(e))
 			exit()
 		if method == "mean":
 			answer = np.mean(data)
@@ -77,7 +77,7 @@ class statistics:
 
 	def output(method,maxi,mini,answer):
 		if method == "mode" :
-			output = "<p>maximum : "+str(maxi)+"</p><p>minimum : "+str(mini)+"</p><p>mode value : "+str(answer[0][0])+"</p><p>number of times it has been sorted : "+str(answer[1][0])+"</p>"
+			output = '{"maximum":"'+str(maxi)+'","minimum":"'+str(mini)+'","mode value":"'+str(answer[0][0])+'","number of times it has been sorted":"'+str(answer[1][0])+'"}'		
 		else:
-			output = "<p>maximum : "+str(maxi)+"</p><p>minimum : "+str(mini)+"</p><p>"+str(method)+" : "+str(answer)+"</p>"
+			output = '{"maximum":"'+str(maxi)+'","minimum":"'+str(mini)+'","'+str(method)+'":"'+str(answer)+'"}'
 		return output

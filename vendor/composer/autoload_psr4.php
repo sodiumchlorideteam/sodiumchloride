@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'View\\' => array($baseDir . '/views'),
     'Universe\\' => array($baseDir . '/app/universe'),
+    'Sodium\\' => array($baseDir . '/app/Sodium'),
     'Route\\' => array($baseDir . '/routes'),
     'Model\\' => array($baseDir . '/app/model'),
     'Loader\\' => array($baseDir . '/app/loader'),

@@ -8,6 +8,7 @@
 			"AppData\\":"app/app_data/",
 			"Route\\":"routes/",
 			"Model\\":"app/model/",
+			"Sodium\\":"app/Sodium/",
 			"View\\":"views/",
 			"Universe\\":"app/universe/",
 			"Error\\":"app/error/",

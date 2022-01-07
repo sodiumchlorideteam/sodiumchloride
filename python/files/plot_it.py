@@ -9,20 +9,20 @@ def plot_it(who,plot_path,x,y,x_label_array,y_label_array,calc_template,given_va
 		import matplotlib.pyplot as plt
 		import time
 	except Exception as e:
-		print("<p style='color:red;'>"+str(e)+"</p>")
+		print(str(e))
 		exit()
-	if who == "linear" :
+	if who == "linear_regression" :
 		try:
 			from scipy import stats
 		except Exception as e:
-			print("<p style='color:red;'>"+str(e)+"</p>")
+			print(str(e))
 			exit()
 		plt.scatter(x, y)
 		plt.plot(x,calc_template)
 		plt.xlabel(x_label_array[0])
 		plt.ylabel(y_label_array[0])
 		plt.plot([float(x_plot)],[float(y_plot)],marker = 'o')
-	if who =="polynomial":
+	if who =="polynomial_regression":
 		x_sort = sorted(x)
 		y_sort = sorted(y)
 		x_high = x_sort[len(x_sort)-1]
@@ -34,7 +34,7 @@ def plot_it(who,plot_path,x,y,x_label_array,y_label_array,calc_template,given_va
 		try:
 			import numpy 
 		except Exception as e:
-			print("<p style='color:red;'>"+str(e)+"</p>")
+			print(str(e))
 			exit()
 		myline = numpy.linspace(low_all,x_high,y_high)
 		plt.scatter(x,y)
@@ -54,7 +54,7 @@ class data_visualization:
 			import time
 			import plotly.graph_objects as go
 		except Exception as e:
-			print("<p style='color:red;'>"+str(e)+"</p>")
+			print(str(e))
 			exit()
 		if graph.lower() == "line":
 			for i in range(len(label_array)):
