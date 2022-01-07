@@ -1,9 +1,9 @@
 # sodiumchloride
  Project name        : sodium chloride\
  objective           : Explore,Experiment your data with datascience and machine learning \
- version             : beta 0.1.2\
+ version             : beta 0.1.3\
  released on         : 13/12/2021\
- last update         : 04/01/2022\
+ last update         : 07/01/2022\
  official website    : https://sodiumchloride.in<br/>
  official email      : official@sodiumchloride.in , sodiumchloride.in@gmail.com\
  developers contact  : marimuthu@sodiumchloride.in , mukila@sodiumchloride.in\
@@ -21,7 +21,7 @@
   ```
   1.Data visualization:
        To create the graphs
-    command:
+    tool command:
         GraphName->x,y
     available graphs:
         1.Line
@@ -33,11 +33,11 @@
         7.Bar
         8.Stacked_bar
         9.Horizontal_bar
-        10.Histogram```
+        10.Histogram
         
    2.Statistics:
           To make statistical operations with the data.
-     command:
+     tool command:
           Method->x
      available methods:
           1.Mean
@@ -48,14 +48,27 @@
           
     3.Linear regression:
         To create linear model
-      command:
+      tool command:
         Feature_x,Feature_y->given_value,? ( Prediction dependant on x )
                    OR
         Feature_x,Feature_y->?,given_value  ( Prediction dependant on y )
         
      4.Polynomial regression:
         To create polynomial model
-      command:
+      tool command:
         Feature_x,Feature_y->given_value,? ( Prediction dependant on x )
                    OR
         Feature_x,Feature_y->?,given_value  ( Prediction dependant on y )
+ ```
+2.Accessing via command line interface :
+ ```
+       Usage:
+       php sodium [<command>]
+       Help :
+       php sodium --help
+       Tools :
+       php sodium --tool linear_regression <file_name> [tool_command]
+       php sodium --tool polynomial_regression <file_name> [tool_command]
+       php sodium --tool statistics <file_name> [tool_command]
+       php sodium --tool datavisualization <file_name> [tool_command]
+```
