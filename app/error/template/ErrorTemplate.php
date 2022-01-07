@@ -103,7 +103,7 @@ else{
 <?php
  } 
  ?>
-  <span class="go-back"><a href="<?php echo $directory->lab; ?>">Go back</a></span>
+  <span class="go-back"><a href="<?php echo $directory->root; ?>">Go back</a></span>
 </div>
 
 </body>
