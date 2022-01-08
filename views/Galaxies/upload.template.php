@@ -1,12 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>uploads</title>
 <?php 
 use Loader\Class\Load; 
 use App\Class\File\FetchFile;
-use Model\Class\Universal;
 use App\Class\File\DeleteFile;
 
-$fetched_file = FetchFile::__init__();
-$file         = $fetched_file[0];
-$n            = $fetched_file[1];
+$fetched_file = FetchFile::Build();
+$file         = $fetched_file["data"];
+$n            = $fetched_file["count"];
 
 
 //delete the file
@@ -21,22 +25,12 @@ else{
 }
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>uploads</title>
-    <link rel="icon shortcut" type="image/png" href='<?php Load::assets("images/logo/sdcl-png.png");?>'>
-    <link rel="stylesheet" type="text/css" href="<?php Load::assets('css/upload.css'); ?>">
-    <?php Load::view("Stars/navigation.html",true);?>
-<?php 
-if (isset($_GET['upload'])){
-Load::view("Stars/next.uploader.php",true); 
-} 
-?>
-  <link rel="stylesheet" type="text/css" href="<?php Load::assets('css/navigation.css'); ?>">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script type="text/javascript" src="<?php Load::assets('js/jquery-3.6.0.min.js'); ?>"></script>
+<?php Load::view("Stars/navigation.html",true);?>
+<?php if (isset($_GET['upload'])){Load::view("Stars/next.uploader.php",true);}?>
+<link rel="icon shortcut" type="image/png" href='<?php Load::assets("images/logo/sdcl-png.png");?>'>
+<link rel="stylesheet" type="text/css" href="<?php Load::assets('css/upload.css'); ?>?<?php echo time(); ?>">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script type="text/javascript" src="<?php Load::assets('js/jquery-3.6.0.min.js'); ?>"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
@@ -52,9 +46,8 @@ if (!isset($_GET['upload']) && !isset($_GET['delete']) ){
 //if no file is there
 if ($n == 0 ){
 ?>
-
-<div id="root-root-upload" class="container-fluid">
-    <button  style="background-color:#EEE4E4;border:solid 1px #EEE4E4;color:#000;display:block;outline:none;">
+<div id="No-file" class="container-fluid">
+    <button>
     <?php if(!isset($_GET['upload'])){?>
                <img src="<?php Load::assets("images/file.png");?>" width="70%">
                 <?php }?>
@@ -65,8 +58,8 @@ if ($n == 0 ){
 //if any file there
 if ($n != 0 ) {
 ?>
-<div id="upload-true-body">
-	 <ul class="upload-true-body">
+<div id="container">
+	 <ul class="true-file">
    	<table>
    		<tr class="table-first">
    			<td>file name</td>
@@ -79,7 +72,7 @@ for ($j=0; $j < $n; $j++) {
 ?>
    		<tr>
    			<td><?php echo $file[$j][0]["file name"];  ?></td>
-   			<td><?php echo Universal::__change__byte($file[$j][0]["file size"]);  ?></td>
+   			<td><?php echo FetchFile::CHANGE_FROM_BYTE($file[$j][0]["file size"]);  ?></td>
    			<td><?php echo date('d/m/y',$file[$j][0]["time"] ); ?></td>
    			<td>
                <?php

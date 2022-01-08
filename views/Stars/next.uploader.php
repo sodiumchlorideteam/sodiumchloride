@@ -174,7 +174,7 @@ $('#uploadStatus').empty();
 <div class="progress" style="display:none ;height:5px;border-radius:0px;">
     <div class="progress-bar" id='progress-bar'></div>
 </div>
-
+<br/>
 <div id="uploadStatus"></div>
 		<div class="upload-actions">
 			<a  class="btn btn-light" onclick="window.location.href='<?php echo $directory ->uploads;  ?>';">

@@ -9,9 +9,9 @@ class FetchFileToHTML
 	
 	public static function Build()
 	{
-         $file = FetchFile::__init__();
-         $file_data = $file[0];
-         $file_columns = $file[1];
+         $file = FetchFile::Build();
+         $file_data = $file["data"];
+         $file_columns = $file["count"];
          $html   = self::returnHTML(self::option_html($file_columns,$file_data));
          return $html;
 	}

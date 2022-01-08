@@ -12,25 +12,25 @@
   border:solid 1px #282360;
 }
 
-#root-root-upload{
+#No-file{
 	margin-top:1%;
 	width:50%;
 	padding:1%;
 	display:block;
 	margin-left:29%;
 }
-#root-root-upload ul{
+#No-file ul{
 	display:flex;
 	justify-content:space-around;
 	width:100%;
 }
 
-#root-root-upload ul li{
+#No-file ul li{
 	width:90%;
 	font-family:sans-serif;
 	display:flex;
 }
-#root-root-upload ul li div{
+#No-file ul li div{
 		padding:1%;
 	border:solid 1px #E1E4EC;
 		margin-left:1%;
@@ -39,23 +39,24 @@
 
 
 
-#root-root-upload ul li label{
+#No-file ul li label{
 	font-family:monospace;
 	font-weight:bolder;
 }
-#root-root-upload ul li div span{
+#No-file ul li div span{
 	display: flex;
 	font-size:12px;
 	font-weight:lighter;
 	font-family: sans-serif;
 	white-space:nowrap;
 }
-#root-root-upload ul li div progress{
+#No-file ul li div progress{
 	margin-left:1%;
 	background-color:#fff;
 }
-#root-root-upload button{
-	display:flex;
+#No-file button{
+	display:block;
+	outline:none;
 	border-radius:0px;
 	margin-left:auto;
 	margin-right:auto;
@@ -63,29 +64,30 @@
 	font-size:20px;
 	font-family: sans-serif;
 	padding:1%;
-  background-color:#0B59C2;
-  color:#fff;
   text-transform: uppercase;
+  background-color:#EEE4E4;
+  border:solid 1px #EEE4E4;
+  color:#000;
 }
 @media screen and (max-width: 1040px){
-#root-root-upload button{
+#No-file button{
 	margin-top:15%;
 }
 }
 @media screen and (max-width:900px){
-	#root-root-upload{
+	#No-file{
 	width:100%;
 }
-#root-root-upload ul li{
+#No-file ul li{
 	width:100%;
 }
-#root-root-upload ul li div{
+#No-file ul li div{
 	margin-left:1%;
 
 }
 }
 @media screen and (max-width:790px){
-	#root-root-upload ul li{
+	#No-file ul li{
 	display:flex;
 	overflow-x:scroll;
 	
@@ -99,22 +101,22 @@
 ::-webkit-scrollbar-thumb {
     background: #fff;
 }
-#root-root-upload button{
+#No-file button{
 	margin-top:20%;
 }
 }
 @media screen and (max-width: 539px){
-	#root-root-upload ul li div{
+	#No-file ul li div{
 	margin-left:1%;
 	width:100%;
 	margin-top:2%;
 }
-#root-root-upload button{
+#No-file button{
 	margin-top:25%;
 	padding:2%;
 	font-size:12px;
 }
-#root-root-upload ul li div span{
+#No-file ul li div span{
 	display: flex;
 	font-size:11px;
 	font-weight:lighter;
@@ -137,7 +139,7 @@ progress::-webkit-progress-bar {
 
 
 /* body */
-#upload-true-body{
+#container{
 	margin-top:1%;
 	width:85%;
 	padding:1%;
@@ -145,7 +147,7 @@ progress::-webkit-progress-bar {
 	margin-left: auto;
 
 }
-#upload-true-body ul li button{
+#container ul li button{
 	display: flex;
 	border-radius:0px;
   margin-left:auto;
@@ -158,7 +160,7 @@ progress::-webkit-progress-bar {
   width: 100%;
 }
 
-.upload-true-body td:not(.table-first) {
+.true-file td:not(.table-first) {
   text-align: center;
   padding: 8px;
   text-align:center;
@@ -210,25 +212,40 @@ progress::-webkit-progress-bar {
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
-
+@media screen and (max-width:1300px){
+	#container{
+  width:80%;
+}
+@media screen and (max-width:1000px){
+	#container{
+  width:75%;
+}
+@media screen and (max-width:800px){
+	#container{
+  width:70%;
+}
+@media screen and (max-width:680px){
+	#container{
+  width:60%;
+}
 @media screen and (max-width:510px){
-	#upload-true-body ul li button{
+	#container ul li button{
 font-size:12px;
 }
 	.table-first td{
 font-size:13px !important;
 }
-.upload-true-body td:not(.table-first) {
+.true-file td:not(.table-first) {
  font-size:12px;
 }
 }
 @media screen and (max-width:277px){
-#upload-true-body{
+#container{
 		margin-top:1%;
 	width:95%;
 	margin-right:20%;
 }
-.upload-true-body td:not(.table-first) {
+.true-file td:not(.table-first) {
   padding: 3%;
 }
 .table-first td{

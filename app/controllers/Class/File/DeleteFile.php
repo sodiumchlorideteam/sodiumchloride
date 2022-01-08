@@ -10,9 +10,9 @@ class DeleteFile
 use JsonHandling;
   public  function delete($url,$id){
  	$directory    = $GLOBALS['directory']; 
-    $fetched_file = FetchFile::__init__();
-    $file         = $fetched_file[0];
-    $n            = $fetched_file[1];
+    $fetched_file = FetchFile::Build();
+    $file         = $fetched_file["data"];
+    $n            = $fetched_file["count"];
     $path         = $file[$id][0]['file path'];
     $file_name    = $file[$id][0]['file name'];
   if ($n==0) {
