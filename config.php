@@ -2,6 +2,10 @@
 use Universe\Class\Universe;
 use AppData\Directory;
 /**
+ * ENVIRONMENT RESOURCES
+ */
+set_time_limit($_ENV['EXECUTION_TIME_OUT']);//5 minutes
+/**
  * DIRECTORY RESOURCES
  */
 $PATH                =  pathinfo(getcwd());
@@ -31,4 +35,4 @@ if(!defined("COMMAND_LINE")){
  /**
  * PYTHON DATA
  */
-$python_data = array($directory->python."files/__init__.py",$directory->python."files/",$directory->python."library/");
+$python_data = array($directory->python."files/__init__.py",$directory->python."files/",$directory->python."libraries/");

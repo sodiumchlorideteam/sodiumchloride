@@ -17,12 +17,15 @@ class UploadFunctions extends Universal
      echo "file already exists";
      return false;
     }
+
+   if (file_put_contents('uploads/'.$file['name'],file_get_contents($file['tmp_name']))) {
+    
     $oldJson = json_decode(file_get_contents($directory->app_data.'/uploaded.json'),true);
     $old     = $this->__prepare__old__data__($oldJson,count($oldJson));
     $new     = $this->__preapare__new__data__(count($oldJson),$file,$file_path,parent::__gen__url__());
     $prepared_data = $this->__prepare__all__($old,$new);
-   if (file_put_contents($directory->app_data.'/uploaded.json',$prepared_data)) {
-     if (file_put_contents('uploads/'.$file['name'],file_get_contents($file['tmp_name']))) {
+
+     if (file_put_contents($directory->app_data.'/uploaded.json',$prepared_data)){
         return true;
      }
    }

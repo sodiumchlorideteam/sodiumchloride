@@ -1,53 +1,59 @@
 {
           "0" : [
         {
-         "file name":"banking.csv",
-         "file format":"application/vnd.ms-excel",
-         "file size" : "4882918",
-         "file path":"C:/xampp2/htdocs/Github/sodiumchloride/uploads//banking.csv",
-         "time":"1641659602",
-         "unique id":"DWXOKl1641659602",
-         "status" :"active"
-        }
-    ], "1" : [
-        {
-         "file name":"car.xlsx",
-         "file format":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-         "file size" : "10146",
-         "file path":"C:/xampp2/htdocs/Github/sodiumchloride/uploads//car.xlsx",
-         "time":"1641659613",
-         "unique id":"QF7rA51641659613",
-         "status" :"active"
-        }
-    ], "2" : [
-        {
-         "file name":"startup_funding.csv",
-         "file format":"application/vnd.ms-excel",
-         "file size" : "425798",
-         "file path":"C:/xampp2/htdocs/Github/sodiumchloride/uploads//startup_funding.csv",
-         "time":"1641659631",
-         "unique id":"bszCe11641659631",
-         "status" :"active"
-        }
-    ], "3" : [
-        {
          "file name":"UKOnlineRetail.xlsx",
          "file format":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
          "file size" : "23715344",
          "file path":"C:/xampp2/htdocs/Github/sodiumchloride/uploads//UKOnlineRetail.xlsx",
-         "time":"1641659642",
-         "unique id":"wlhTZ41641659642",
+         "header data":[{"InvoiceNo":"string","StockCode":"string","Description":"string","Quantity":"integer","InvoiceDate":"datetime64[ns]","UnitPrice":"float","CustomerID":"float","Country":"string"}],
+         "time":"1641733522",
+         "unique id":"d7SeU91641733286",
          "status" :"active"
         }
-    ],
-          "4" : [
+    ], "1" : [
+        {
+         "file name":"banking.csv",
+         "file format":"application/vnd.ms-excel",
+         "file size" : "4882918",
+         "file path":"C:/xampp2/htdocs/Github/sodiumchloride/uploads//banking.csv",
+         "header data":[{"age":"integer","job":"string","marital":"string","education":"string","default":"string","housing":"string","loan":"string","contact":"string","month":"string","day_of_week":"string","duration":"integer","campaign":"integer","pdays":"integer","previous":"integer","poutcome":"string","emp_var_rate":"float","cons_price_idx":"float","cons_conf_idx":"float","euribor3m":"float","nr_employed":"float","y":"integer"}],
+         "time":"1641733552",
+         "unique id":"NkfP5y1641733549",
+         "status" :"active"
+        }
+    ], "2" : [
         {
          "file name":"housing.csv",
          "file format":"application/vnd.ms-excel",
          "file size" : "1423529",
          "file path":"C:/xampp2/htdocs/Github/sodiumchloride/uploads//housing.csv",
-         "time":"1641667374",
-         "unique id":"TcEFMn1641667374",
+         "header data":[{"longitude":"float","latitude":"float","housing_median_age":"float","total_rooms":"float","total_bedrooms":"float","population":"float","households":"float","median_income":"float","median_house_value":"float","ocean_proximity":"string"}],
+         "time":"1641733562",
+         "unique id":"sxRNEG1641733560",
+         "status" :"active"
+        }
+    ], "3" : [
+        {
+         "file name":"startup_funding.csv",
+         "file format":"application/vnd.ms-excel",
+         "file size" : "425798",
+         "file path":"C:/xampp2/htdocs/Github/sodiumchloride/uploads//startup_funding.csv",
+         "header data":[{"unable to read":"Error with file"}],
+         "time":"1641734316",
+         "unique id":"Nk4Hlu1641734308",
+         "status" :"active"
+        }
+    ],
+          "4" : [
+        {
+         "file name":"car.xlsx",
+         "file format":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+         "file size" : "10146",
+         "file path":"C:/xampp2/htdocs/Github/sodiumchloride/uploads//car.xlsx",
+         "header data":[{ "car":"integer","speed": "integer"}
+],
+         "time":"1641734338",
+         "unique id":"oxZiTm1641734332",
          "status" :"active"
         }
     ]

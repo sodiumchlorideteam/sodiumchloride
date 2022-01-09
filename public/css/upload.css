@@ -191,6 +191,10 @@ progress::-webkit-progress-bar {
   display: inline-block;
 }
 
+#header-content{
+	max-height:200px;
+	overflow-y:scroll;
+  }
 .dropdown-content {
   display:none;
   position:absolute;
@@ -216,17 +220,21 @@ progress::-webkit-progress-bar {
 	#container{
   width:80%;
 }
+}
 @media screen and (max-width:1000px){
 	#container{
   width:75%;
+}
 }
 @media screen and (max-width:800px){
 	#container{
   width:70%;
 }
+}
 @media screen and (max-width:680px){
 	#container{
   width:60%;
+}
 }
 @media screen and (max-width:510px){
 	#container ul li button{
