@@ -6,7 +6,7 @@
  last update         : 07/01/2022\
  official website    : https://sodiumchloride.in<br/>
  official email      : official@sodiumchloride.in , sodiumchloride.in@gmail.com\
- developers contact  : marimuthu@sodiumchloride.in , mukila@sodiumchloride.in\
+ developers contact  : marimuthu@sodiumchloride.in 
  used                : HTML,CSS,JS,jQuery,Php,Python\
  Heart               : Php and Python\
  Python libraries    : numpy,pandas,scikit-learn,matplotlib,plotly and their requirement libraries\
